@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles, Loader2, Image as ImageIcon } from 'lucide-react';
 import { useAppContext } from '../../context/AppContext';
 import { useRemix } from '../../hooks/useRemix';
+import { AdPreview3D } from '../three/AdPreview3D';
+import { SpringButton } from '../ui/SpringButton';
 import '../../styles/remix.css';
 
 const QUICK_ACTIONS = [
@@ -50,11 +52,9 @@ export function RemixModal() {
           {/* Left Column: Original */}
           <div className="remix-modal__left">
             <h3 className="remix-modal__section-title">Original Inspiration</h3>
-            <img 
-              src={selectedAd.originalUrl} 
-              alt="Original" 
-              className="remix-modal__original-image" 
-            />
+            <div style={{ width: '100%', height: '300px', flexShrink: 0 }}>
+              <AdPreview3D imageUrl={selectedAd.originalUrl} />
+            </div>
             
             <div className="remix-modal__metadata">
               <h2 style={{ fontSize: 'var(--text-xl)', fontWeight: 600 }}>{selectedAd.campaign}</h2>
@@ -116,14 +116,14 @@ export function RemixModal() {
                 ))}
               </div>
 
-              <button 
+              <SpringButton 
                 className="btn btn-primary" 
                 style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '8px' }}
                 onClick={handleGenerate}
                 disabled={isGenerating || !prompt.trim()}
               >
                 {isGenerating ? 'Processing...' : 'Generate Remix'} <Sparkles size={18} />
-              </button>
+              </SpringButton>
             </div>
           </div>
         </motion.div>

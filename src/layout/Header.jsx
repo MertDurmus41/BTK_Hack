@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
+import { SpringButton } from '../components/ui/SpringButton';
 
 export function Header() {
   const { currentPage, setCurrentPage } = useAppContext();
@@ -35,12 +36,9 @@ export function Header() {
         <a href="#pricing" style={{ color: 'var(--text-secondary)' }}>Pricing</a>
       </nav>
 
-      <button 
-        className="btn btn-primary"
-        onClick={() => setCurrentPage('archive')}
-      >
+      <SpringButton onClick={() => setCurrentPage('archive')}>
         Open App
-      </button>
+      </SpringButton>
     </motion.header>
   );
 }

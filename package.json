@@ -11,10 +11,15 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "@react-spring/web": "^10.0.3",
+    "cheerio": "^1.2.0",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.16.0",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.43.1",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

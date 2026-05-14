@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
+import { useAppContext } from '../../context/AppContext';
+import { SpringButton } from '../ui/SpringButton';
 
 const containerVariants = {
   initial: {},
@@ -51,16 +53,15 @@ export function HeroSection() {
           with AI, and adapt them to your brand identity — instantly.
         </motion.p>
 
-        {/* CTA Buttons */}
         <motion.div variants={itemVariants} className="hero__ctas">
-          <button className="hero__btn hero__btn--primary">
+          <SpringButton className="hero__btn hero__btn--primary" onClick={() => setCurrentPage('archive')}>
             Enter Archive
             <ArrowRight size={18} />
-          </button>
-          <button className="hero__btn hero__btn--secondary glass">
+          </SpringButton>
+          <SpringButton className="hero__btn hero__btn--secondary glass">
             <Play size={16} fill="currentColor" />
             Watch Demo
-          </button>
+          </SpringButton>
         </motion.div>
 
         {/* Stats */}
