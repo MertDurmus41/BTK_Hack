@@ -1,0 +1,53 @@
+[
+  {
+    "id": "turkcell-ramazan-2024-birlik",
+    "brand": "Turkcell",
+    "campaign": "Ramazan 2024 — Birlik Kampanyası",
+    "thumbnailUrl": "/assets/ads/turkcell-ramazan-2024.jpg",
+    "originalUrl": "/assets/ads/turkcell-ramazan-2024-hd.jpg",
+    "format": "1:1",
+    "contentType": "Özel Gün",
+    "energy": "Duygusal",
+    "sector": "Telekomünikasyon",
+    "period": "Ramazan",
+    "year": 2024,
+    "medium": "Instagram Post",
+    "dominantColor": "#e63946",
+    "tags": ["1:1", "Özel Gün", "Duygusal"],
+    "remixCount": 47
+  },
+  {
+    "id": "coca-cola-yaz-2024-serinlik",
+    "brand": "Coca-Cola",
+    "campaign": "Yaz 2024 — Serinlik Kampanyası",
+    "thumbnailUrl": "/assets/ads/coca-cola-yaz-2024.jpg",
+    "originalUrl": "/assets/ads/coca-cola-yaz-2024-hd.jpg",
+    "format": "16:9",
+    "contentType": "Sezonluk",
+    "energy": "Enerjik",
+    "sector": "FMCG",
+    "period": "Yaz",
+    "year": 2024,
+    "medium": "YouTube Banner",
+    "dominantColor": "#dc2626",
+    "tags": ["16:9", "Sezonluk", "Enerjik"],
+    "remixCount": 32
+  },
+  {
+    "id": "nike-spor-2024-motivasyon",
+    "brand": "Nike",
+    "campaign": "Spor 2024 — Motivasyon Serisi",
+    "thumbnailUrl": "/assets/ads/nike-spor-2024.jpg",
+    "originalUrl": "/assets/ads/nike-spor-2024-hd.jpg",
+    "format": "4:5",
+    "contentType": "Ürün Lansmanı",
+    "energy": "Güçlü",
+    "sector": "Spor",
+    "period": "İlkbahar",
+    "year": 2024,
+    "medium": "Instagram Story",
+    "dominantColor": "#171717",
+    "tags": ["4:5", "Ürün Lansmanı", "Güçlü"],
+    "remixCount": 58
+  }
+]
