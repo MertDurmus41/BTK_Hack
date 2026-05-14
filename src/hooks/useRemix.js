@@ -1,27 +1,45 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
+import { pinokioService } from '../services/pinokio';
+import { geminiService } from '../services/gemini';
 
-/**
- * Hook for managing remix generation state
- * @returns {{ status: string, remixUrl: string|null, error: string|null, startRemix: Function }}
- */
 export function useRemix() {
-  const [status, setStatus] = useState('idle'); // idle | loading | success | error
-  const [remixUrl, setRemixUrl] = useState(null);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [resultImage, setResultImage] = useState(null);
   const [error, setError] = useState(null);
+  const [loadingState, setLoadingState] = useState('');
 
-  const startRemix = useCallback(async ({ imageUrl, prompt }) => {
-    setStatus('loading');
+  const generateRemix = async (ad, userPrompt) => {
+    setIsGenerating(true);
     setError(null);
+    setResultImage(null);
+    
     try {
-      // TODO: Connect to falai.js service
-      // const url = await remixImage({ imageUrl, prompt });
-      // setRemixUrl(url);
-      setStatus('success');
+      // 1. Prompt Enhancement via Gemini
+      setLoadingState('Enhancing prompt with Gemini AI...');
+      const enhancedPrompt = await geminiService.enhancePrompt(userPrompt, ad);
+      
+      // 2. Image Generation via Local Pinokio
+      setLoadingState('Generating image via local Pinokio runtime...');
+      const response = await pinokioService.generateImage(ad.originalUrl, enhancedPrompt);
+      
+      if (response.success) {
+        setResultImage(response.resultUrl);
+      } else {
+        setError(response.error);
+      }
     } catch (err) {
-      setError(err.message);
-      setStatus('error');
+      setError(err.message || 'An unexpected error occurred.');
+    } finally {
+      setIsGenerating(false);
+      setLoadingState('');
     }
-  }, []);
+  };
 
-  return { status, remixUrl, error, startRemix };
+  return {
+    generateRemix,
+    isGenerating,
+    resultImage,
+    error,
+    loadingState
+  };
 }
