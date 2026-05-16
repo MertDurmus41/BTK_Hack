@@ -60,16 +60,7 @@ export function AdCard({ ad }) {
           </div>
         </div>
         
-        <div className="ad-card__metadata">
-          <span className="ad-card__brand">{ad.brand}</span>
-          <h4 className="ad-card__campaign">{ad.campaign}</h4>
-          
-          <div className="ad-card__tags">
-            {ad.tags.map(tag => (
-              <span key={tag} className="ad-tag">{tag}</span>
-            ))}
-          </div>
-        </div>
+
       </div>
     </motion.div>
   );
