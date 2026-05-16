@@ -13,7 +13,11 @@
     "year": 2024,
     "medium": "Social Media",
     "dominantColor": "#007a33",
-    "tags": ["1:1", "Finans", "Hızlı"],
+    "tags": [
+      "1:1",
+      "Finans",
+      "Hızlı"
+    ],
     "remixCount": 156
   },
   {
@@ -30,59 +34,12 @@
     "year": 2024,
     "medium": "Billboard / Social",
     "dominantColor": "#e30613",
-    "tags": ["2:3", "Digital", "Yenilikçi"],
+    "tags": [
+      "2:3",
+      "Digital",
+      "Yenilikçi"
+    ],
     "remixCount": 243
-  },
-  {
-    "id": "trendyol-efsane-gunler",
-    "brand": "Trendyol",
-    "campaign": "Efsane Günler",
-    "thumbnailUrl": "/assets/ads/trendyol_efsane.png",
-    "originalUrl": "/assets/ads/trendyol_efsane.png",
-    "format": "9:16",
-    "contentType": "Campaign",
-    "energy": "Dinamik",
-    "sector": "E-Ticaret",
-    "period": "Kasım",
-    "year": 2024,
-    "medium": "TikTok Video",
-    "dominantColor": "#f27a1a",
-    "tags": ["9:16", "Campaign", "Dinamik", "Video"],
-    "remixCount": 243
-  },
-  {
-    "id": "trendyol-super-alisveris",
-    "brand": "Trendyol",
-    "campaign": "Süper Alışveriş Günleri",
-    "thumbnailUrl": "/assets/ads/trendyol_super.png",
-    "originalUrl": "/assets/ads/trendyol_super.png",
-    "format": "4:5",
-    "contentType": "Promotion",
-    "energy": "Eğlenceli",
-    "sector": "E-Ticaret",
-    "period": "Kasım",
-    "year": 2024,
-    "medium": "Instagram Post",
-    "dominantColor": "#f27a1a",
-    "tags": ["4:5", "Promotion", "Eğlenceli"],
-    "remixCount": 89
-  },
-  {
-    "id": "trendyol-mega-eylul",
-    "brand": "Trendyol",
-    "campaign": "Mega Eylül",
-    "thumbnailUrl": "/assets/ads/trendyol_mega.png",
-    "originalUrl": "/assets/ads/trendyol_mega.png",
-    "format": "16:9",
-    "contentType": "Lansman",
-    "energy": "Güçlü",
-    "sector": "E-Ticaret",
-    "period": "Eylül",
-    "year": 2024,
-    "medium": "Web Banner",
-    "dominantColor": "#f27a1a",
-    "tags": ["16:9", "Lansman", "Güçlü", "Web"],
-    "remixCount": 112
   },
   {
     "id": "hepsiburada-tavsiye-cem",
@@ -98,7 +55,11 @@
     "year": 2024,
     "medium": "Web / TV",
     "dominantColor": "#ff6000",
-    "tags": ["16:9", "Identity", "Profesyonel"],
+    "tags": [
+      "16:9",
+      "Identity",
+      "Profesyonel"
+    ],
     "remixCount": 312
   },
   {
@@ -115,7 +76,11 @@
     "year": 2024,
     "medium": "Instagram",
     "dominantColor": "#e60000",
-    "tags": ["1:1", "Duygusal", "Sürdürülebilirlik"],
+    "tags": [
+      "1:1",
+      "Duygusal",
+      "Sürdürülebilirlik"
+    ],
     "remixCount": 89
   },
   {
@@ -161,23 +126,6 @@
     "remixCount": 32
   },
   {
-    "id": "vakifbank-bayram-cocuklar",
-    "brand": "VakıfBank",
-    "campaign": "Mutluluğa Kapı Aralamanın Adıdır Bayramlaşmak",
-    "thumbnailUrl": "/assets/ads/vakifbank_bayram.jpg",
-    "originalUrl": "/assets/ads/vakifbank_bayram.jpg",
-    "format": "9:16",
-    "contentType": "Bayram Kampanyası",
-    "energy": "Sıcak",
-    "sector": "Finans",
-    "period": "Bayram",
-    "year": 2024,
-    "medium": "Social Media",
-    "dominantColor": "#ffcc00",
-    "tags": ["9:16", "Bayram", "Sıcak"],
-    "remixCount": 542
-  },
-  {
     "id": "mcdonalds-beefy-bliss",
     "brand": "McDonald's",
     "campaign": "Big Beefy Bliss",
@@ -191,7 +139,11 @@
     "year": 2024,
     "medium": "Billboard",
     "dominantColor": "#db0007",
-    "tags": ["16:9", "Food", "İştah Açıcı"],
+    "tags": [
+      "16:9",
+      "Food",
+      "İştah Açıcı"
+    ],
     "remixCount": 312
   },
   {
@@ -208,7 +160,11 @@
     "year": 2024,
     "medium": "Instagram Post",
     "dominantColor": "#db0007",
-    "tags": ["4:5", "Brand", "Dinamik"],
+    "tags": [
+      "4:5",
+      "Brand",
+      "Dinamik"
+    ],
     "remixCount": 425
   },
   {
@@ -225,7 +181,11 @@
     "year": 2024,
     "medium": "Social Media",
     "dominantColor": "#8b0000",
-    "tags": ["1:1", "Promotion", "Lezzetli"],
+    "tags": [
+      "1:1",
+      "Promotion",
+      "Lezzetli"
+    ],
     "remixCount": 178
   },
   {
@@ -242,25 +202,12 @@
     "year": 2024,
     "medium": "Print Ad",
     "dominantColor": "#e4002b",
-    "tags": ["2:3", "Sale", "Enerjik"],
+    "tags": [
+      "2:3",
+      "Sale",
+      "Enerjik"
+    ],
     "remixCount": 267
-  },
-  {
-    "id": "indirim-150tl-mobil",
-    "brand": "E-Ticaret",
-    "campaign": "150TL İndirimi Kaçırma!",
-    "thumbnailUrl": "/assets/ads/indirim_150tl.jpg",
-    "originalUrl": "/assets/ads/indirim_150tl.jpg",
-    "format": "9:16",
-    "contentType": "Mobile Ad",
-    "energy": "Acil",
-    "sector": "E-Ticaret",
-    "period": "Kampanya",
-    "year": 2024,
-    "medium": "Mobile Story",
-    "dominantColor": "#f97316",
-    "tags": ["9:16", "Mobile", "Acil"],
-    "remixCount": 189
   },
   {
     "id": "thy-kariyerine-zirvede-basla",
