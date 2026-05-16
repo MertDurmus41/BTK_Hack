@@ -144,19 +144,27 @@
 
 /* Masonry Grid */
 .ad-grid {
-  column-count: 3;
-  column-gap: var(--space-xl);
+  column-count: 5;
+  column-gap: var(--space-lg);
   width: 100%;
 }
 
+@media (max-width: 1600px) {
+  .ad-grid { column-count: 4; }
+}
+
 @media (max-width: 1200px) {
-  .ad-grid { column-count: 2; }
+  .ad-grid { column-count: 3; }
 }
 
 @media (max-width: 768px) {
-  .ad-grid { column-count: 1; }
+  .ad-grid { column-count: 2; }
   .archive-page { flex-direction: column; }
   .archive-sidebar { width: 100%; height: auto; position: static; }
+}
+
+@media (max-width: 480px) {
+  .ad-grid { column-count: 1; }
 }
 
 .ad-card-wrapper {
@@ -254,4 +262,76 @@
   background: var(--bg-secondary);
   color: var(--text-secondary);
   border: 1px solid var(--border);
+}
+
+/* ---- Ad Placeholder Styles ---- */
+.ad-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-xl);
+  background: var(--bg-tertiary);
+}
+
+.ad-placeholder__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.ad-placeholder__brand {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--text-primary);
+  opacity: 0.8;
+}
+
+.ad-placeholder__campaign {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+
+.ad-placeholder__upload-hint {
+  margin-top: var(--space-md);
+  font-size: 12px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.ad-placeholder:hover .ad-placeholder__upload-hint {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.ad-placeholder__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  filter: blur(60px);
+  opacity: 0.2;
+  z-index: 1;
+  border-radius: 50%;
 }

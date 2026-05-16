@@ -38,6 +38,16 @@ export function AppProvider({ children }) {
   const [currentPage, setCurrentPage] = useState('landing');
   const [selectedAd, setSelectedAd] = useState(null);
   const [filters, dispatchFilters] = useReducer(filterReducer, initialFilters);
+  const [userImages, setUserImages] = useState(() => {
+    const saved = localStorage.getItem('user_ad_images');
+    return saved ? JSON.parse(saved) : {};
+  });
+
+  const uploadUserImage = (adId, base64) => {
+    const updated = { ...userImages, [adId]: base64 };
+    setUserImages(updated);
+    localStorage.setItem('user_ad_images', JSON.stringify(updated));
+  };
 
   return (
     <AppContext.Provider value={{ 
@@ -46,7 +56,9 @@ export function AppProvider({ children }) {
       selectedAd,
       setSelectedAd,
       filters, 
-      dispatchFilters 
+      dispatchFilters,
+      userImages,
+      uploadUserImage
     }}>
       {children}
     </AppContext.Provider>
