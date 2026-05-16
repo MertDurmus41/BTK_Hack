@@ -3,10 +3,10 @@ import fs from 'fs';
 import path from 'path';
 
 const images = [
-  { filename: 'anatolium_food.png', url: 'https://anatolium-marmara.com/uploads/kampanya_detay/1000x1000/at_yemek-sm-2022-02-01-16-17-06.png' },
-  { filename: 'mcdonalds_portrait.png', url: 'https://digitalsynopsis.com/wp-content/uploads/2020/02/mcdonalds-im-lovin-it-3.jpg' },
-  { filename: 'vakifbank_bayram.png', url: 'https://www.adjustbrand.com/wp-content/uploads/2022/04/VakifBankin-Ramazan-Bayrami-reklami-yayinda-1024x684.jpg' },
-  { filename: 'mcdonalds_landscape.png', url: 'https://miro.medium.com/v2/resize:fit:1000/1*4690Xo_XmC2oT0jM4oY_rA.jpeg' }
+  { filename: 'garanti_tatil.png', url: 'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=247946406786231&get_thumbnail=1' },
+  { filename: 'akbank_atm.png', url: 'https://media.licdn.com/dms/image/v2/C4D22AQG3MS2X50hBwg/feedshare-shrink_800/feedshare-shrink_800/0/1592619108508?e=2147483647&v=beta&t=oNLOyC8GY8nuJvJa92O-NkMPJR0Ah7W7WVDxm03-tpY' },
+  { filename: 'hepsiburada_cem_yilmaz.png', url: 'https://epnext.com/wp-content/uploads/2022/05/Hepsiburada.jpg' },
+  { filename: 'kfc_treat.png', url: 'https://advertgallery.com/wp-content/uploads/2018/01/kfc-big-treat-week-save-upto-42-ad-dainik-jagran-patna-13-01-2018.jpg' }
 ];
 
 async function downloadImages() {
@@ -17,6 +17,7 @@ async function downloadImages() {
     console.log(`Downloading ${filename} from ${url}...`);
     try {
       const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       const buffer = await response.buffer();
       fs.writeFileSync(path.join(dir, filename), buffer);
       console.log(`Saved ${filename}`);
