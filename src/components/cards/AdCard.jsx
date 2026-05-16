@@ -41,22 +41,12 @@ export function AdCard({ ad }) {
               onError={() => setImgError(true)}
             />
           ) : (
-            <div className="ad-placeholder" onClick={() => fileInputRef.current?.click()}>
+            <div className="ad-placeholder">
               <div className="ad-placeholder__content">
                 <span className="ad-placeholder__brand">{ad.brand}</span>
                 <span className="ad-placeholder__campaign">{ad.campaign}</span>
-                <div className="ad-placeholder__upload-hint">
-                  <Upload size={14} /> Click to upload image
-                </div>
               </div>
               <div className="ad-placeholder__glow" style={{ background: ad.dominantColor }} />
-              <input 
-                type="file" 
-                ref={fileInputRef} 
-                style={{ display: 'none' }} 
-                accept="image/*"
-                onChange={handleFileUpload}
-              />
             </div>
           )}
           <div className="ad-card__overlay">
